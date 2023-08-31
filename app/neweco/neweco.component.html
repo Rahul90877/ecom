@@ -1,0 +1,314 @@
+<app-navbar></app-navbar>
+<div>
+  <th *ngFor="let x of products">
+    <tr>{{x.ProductId}}</tr>
+
+  </th>
+</div>
+
+<div class="">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="width: 1150px;height: 400px;margin-left: 130px;">
+        <img
+          src="https://img.freepik.com/free-vector/flat-horizontal-sale-banner-template-with-photo_23-2149000923.jpg?w=996&t=st=1689836991~exp=1689837591~hmac=05b7e7978640dc8b1d0ceeaaa18652d8b64f2fe6129cab90b028a4b68db84fb9"
+          alt="" width="100%" height="100%">
+      </div>
+      <div class="carousel-item" style="width: 1150px;height: 400px;margin-left: 130px;">
+        <img
+          src="https://img.freepik.com/vecteurs-libre/modele-couverture-medias-sociaux-centre-commercial-degrade_23-2149328603.jpg?w=826&t=st=1689837267~exp=1689837867~hmac=38950a060aac07ac5daaedb707e685190234ae8ce197d9be8b9d12d713fe32bb"
+          class="d-block w-100" alt="..." width="100%" height="100%">
+      </div>
+      <div class="carousel-item" style="width: 1400;height:800px;">
+        <img
+          src="https://img.freepik.com/psd-premium/modele-couverture-facebook-vente-chaussures-confortables_160623-188.jpg?size=626&ext=jpg"
+          class="d-block w-100" alt="..." width="100%" height="100%">
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<h1 style="margin-left: 340px;">BRAND NEW PRODUCTS AT YOUR VIEW</h1>
+<div class="row  " style="margin-top: 20px;">
+
+  <div   class="  container card col-3 "
+    style="width: 330px; margin-left: 20px; margin-bottom: 20px;height: 610px; " *ngFor="let x of prodLists">
+    <img [src]="x.imgUrl" (click)="Route(x.ProductId,1)"height="300px" style="width: 250px;" class="card-img-top" alt="...">
+
+    <h5>{{x.ProductName}}</h5>
+    <p>{{x.Description}}</p>
+    <p style="background-color: #388E3C;width: 70px;color: aliceblue;border-radius: 50px;text-align: center;">
+      <b>{{x.Rating}}</b><i class="fa fa-star" style="color:white;text-align: center;margin-left: 5px; "
+        aria-hidden="true"></i>
+    <p>{{a|currency: 'INR'}}</p>
+    <h3>₹{{x.price1}}</h3>
+    <p>{{x.mrp}}</p>
+    <a class="card-link"><a class="btn btn-warning" role="button" (click)="addtocart(x)" >ADD TO CART</a><a class="btn btn-primary"
+        style="margin-left: 2px;" role="button" routerLink="/product">More product</a></a>
+  </div>
+</div>
+
+<div class="row">
+
+  <div  class="  container card col-3 "
+    style="width: 330px; margin-left: 20px; margin-bottom: 20px; height: 610px; " *ngFor="let x of prodList1">
+    <img [src]="x.imgUrl" (click)="Route(x.ProductId,2)" height="300px"
+      style="width: 260px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px; " class="card-img-top" alt="...">
+
+    <h5>{{x.ProductName1}}</h5>
+    <p>{{x.Description}}</p>
+    <p style="background-color: #388E3C;width: 70px;color: aliceblue;border-radius:50px;text-align: center;">
+      <b>{{x.Rating}}</b><i class="fa fa-star" style="color: white;text-align: center;margin-left: 5px; "
+        aria-hidden="true"></i>
+    <p>{{a|currency: 'inr'}}</p>
+    <h3>₹{{x.price1}}</h3>
+    <p>{{x.mrp1}}</p>
+    <a class="card-link"><a class="btn btn-warning" role="button" (click)="addtocart(x)">ADD TO CART</a><a class="btn btn-primary"
+        style="margin-left: 2px;" role="button" routerLink="/product">More product</a></a>
+  </div>
+</div>
+
+<div class="row">
+
+  <div  class="  container card col-3 "
+    style="width: 330px; margin-left: 20px; margin-bottom: 20px; height: 610px; " *ngFor="let x of prodList2">
+    <img [src]="x.imgUrl" (click)="Route(x.ProductId,3)" height="300px"
+      style="width: 260px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px; " class="card-img-top" alt="...">
+
+    <h5>{{x.ProductName1}}</h5>
+    <p>{{x.Description}}</p>
+    <p style="background-color: #388E3C;width: 70px;color: aliceblue;border-radius:50px;text-align: center;">
+      <b>{{x.Rating}}</b><i class="fa fa-star" style="color: white;text-align: center;margin-left: 5px; "
+        aria-hidden="true"></i>
+    <p>{{a|currency: 'INR'}}</p>
+    <h3>₹{{x.price1}}</h3>
+    <p>{{x.mrp1}}</p>
+    <a class="card-link"><a class="btn btn-warning" role="button"(click)="addtocart(x)">ADD TO CART</a><a class="btn btn-primary"
+        style="margin-left: 2px;" role="button" routerLink="/product">More product</a></a>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="container card col-3 "
+    style="width: 330px; margin-left: 20px; margin-bottom: 20px; height: 610px;" *ngFor="let x of prodList3">
+    <img [src]="x.imgUrl" (click)="Route(x.ProductId,4)" height="300px" style="width: 200px;margin-top: 10px; margin-bottom: 10px; "
+      class="card-img-top" alt="...">
+
+    <h5>{{x.ProductName1}}</h5>
+    <p>{{x.Description}}</p>
+    <p style="background-color: #388E3C;width: 70px;color: aliceblue;border-radius: 50px;text-align: center;">
+      <b>{{x.Rating}}</b><i class="fa fa-star" style="color: white;text-align: center;margin-left: 5px; "
+        aria-hidden="true"></i>
+    <p>{{a|currency: 'INR'}}</p>
+    <h3>₹{{x.price1}}</h3>
+    <p>{{x.mrp1}}</p>
+    <a class="card-link"><a class="btn btn-warning" role="button"(click)="addtocart(x)">ADD TO CART</a><a class="btn btn-primary"
+        style="margin-left: 2px;" role="button" routerLink="/product">More product</a></a>
+  </div>
+</div>
+<!-- <----------footer----------->
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+
+      <i class="fa fa-facebook-square" aria-hidden="true" style="font-size: 35px;"></i>
+
+
+      <!-- Twitter -->
+      <i class="fa fa-twitter-square" aria-hidden="true" style="font-size: 35px; margin-left: 10px; "></i>
+
+      <!-- Google -->
+      <i class="fa fa-google-plus-square" aria-hidden="true" style="font-size: 35px; margin-left: 10px; "></i>
+
+      <!-- Instagram -->
+      <i class="fa fa-instagram" aria-hidden="true" style="font-size: 35px; margin-left: 10px; "></i>
+
+      <!-- Linkedin -->
+      <i class="fa fa-linkedin-square" aria-hidden="true" style="font-size: 35px; margin-left: 10px; "></i>
+
+      <!-- Github -->
+      <i class="fa fa-github-square" aria-hidden="true" style="font-size: 35px; margin-left: 10px; "></i>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center" style="margin-right: 80px;">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up, New customer Start here-></strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" />
+              <label class="form-label" for="form5Example21"></label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-warning mb-4" routerLink="/signup" >
+              Sign up
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text">Get to Know Us</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">About Us</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Careers</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Press Releases</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Amazon Science
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-">Connect with Us</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Facebook</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Twitter</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Instagram</a>
+            </li>
+            <li>
+
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-">Make Money with Us</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Sell on Evilo</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Sell under Evilo Accelerator</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Protect and Build Your Brand</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Advertise Your Products</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Evilo Pay on Merchants</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-">Let Us Help You</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Your Account</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Returns Centre</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">100% Purchase Protection</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Help</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <br>
+    <br>
+    <!-- Section: Links -->
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Australia
+        Brazil,
+        Canada,
+        China,
+        France,
+        Germany,
+        Italy,
+        Japan,
+        Mexico,
+        Netherlands,
+        Poland,
+        Singapore,
+        Spain,
+        Turkey,
+        United Arab Emirates,
+        United Kingdom,
+        United States,
+      </p>
+    </section>
+    <!-- Section: Text -->
+  </div>
+  <!-- Grid container --> 
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    Conditions of Use & Sale
+    Privacy Notice
+    Interest-Based Ads
+
+    <P>© 1996-2023, Evilo.com, Inc. or its affiliates</P>
+    <a class="text-white" href="https://mdbootstrap.com/">Evilo.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->

@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div class="card">
+  <div class="card-body">
+
+    <div class="card">
+      <div class="card-body">
+
+        <div class="card mb-3" style="max-width: 100%;">
+          <div class="row g-0">
+            <div class="col-md-4 ">
+             <!-- *ngFor="let x of mobilelist" -->
+             
+              <img [src]="prodList[0].imgUrl" height="fit-content" width="100%" class="card-img-top" alt="...">
+              
+             
+              
+
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="card-body" *ngFor="let x of prodList">
+                <h2 style="text-transform: capitalize;">{{x.ProductName}}</h2>
+                <br>
+                <h5>{{x.Description}}</h5>
+                <div style="text-align: center;">
+                  <p style="background-color: #388E3C;width: 50px;color: aliceblue;border-radius: 10px;">
+                    <b>{{x.Rating}}</b><i class="fa fa-star" style="color: white;text-align: center;margin-left: 5px; "
+                      aria-hidden="true"></i>
+                  </p>
+                </div>
+                <h5 style="color: #388E3C;"> Extra ₹7901 off</h5>
+
+                <p class="card-text"></p>
+                <h3><b>{{x.price | currency:'INR':true}}</b></h3>
+                <div>
+                  <h6>+ ₹99 Secured Packaging Fee</h6>
+                  <button type="button" class="btn btn-outline-warning" style="margin: auto;">ADD TO CART</button>
+                  
+                  <h4>Available offers</h4>
+                  <i class="fa fa-tags" aria-hidden="true" style="color: #15BD49;"></i><b> Bank Offer</b>5% Cashback on
+                  Flipkart Axis Bank CardT&C <br>
+                  <i class="fa fa-tags" aria-hidden="true" style="color: #15BD49;"></i><b> Bank Offer</b>₹2000 Off On
+                  HDFC Bank Debit Card EMI TransactionsT&C <br>
+                  <i class="fa fa-tags" aria-hidden="true" style="color: #15BD49;"></i><b> Bank Offer</b> ₹2000 Off On
+                  HDFC Bank Credit Card TransactionsT&C <br>
+                  <i class="fa fa-tags" aria-hidden="true" style="color: #15BD49;"></i><b> Special Price</b>Get extra
+                  ₹7901 off (price inclusive of cashback/coupon)T&C <br>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
